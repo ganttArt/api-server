@@ -1,0 +1,28 @@
+{
+  "name": "4-api-server",
+  "version": "1.0.0",
+  "description": "Data Modeling: The process of taking a real world or conceptual idea and encoding it into Javascript's built in data types. Models typically describe the physical characteristics (properties) and behaviors (methods) of an object in a way that you can write code that uses your models to problem solve and create applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganttArt/api-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ganttArt/api-server/issues"
+  },
+  "homepage": "https://github.com/ganttArt/api-server#readme",
+  "dependencies": {
+    "@code-fellows/supergoose": "^1.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^26.6.3",
+    "mongoose": "^5.12.5"
+  }
+}
