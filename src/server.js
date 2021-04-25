@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const mongoose = require('mongoose');
 // const MONGODB_URI = 'mongodb://localhost:27017/cf401Lab4';
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/cf401Lab4';
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true });
 
 const familyRoutes = require('./routes/family-routes.js');
