@@ -26,6 +26,7 @@ function getOnePet(req, res) {
 }
 
 function createPet(req, res) {
+  console.log(req.body)
   pet.create(req.body)
     .then(pet => res.status(201).json(pet))
     .catch(error => res.status(500).send('error creating pet'));
