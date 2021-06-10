@@ -11,6 +11,9 @@ const mongoose = require('mongoose');
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/cf401Lab4';
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true });
 
+const productRoutes = require('./routes/store/product-routes');
+const cartRoutes = require('./routes/store/cart-routes');
+const categoryRoutes = require('./routes/store/category-routes');
 const todoRoutes = require('./routes/todo-routes');
 const familyRoutes = require('./routes/family-routes.js');
 const petRoutes = require('./routes/pet-routes');
@@ -20,6 +23,9 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
+app.use(productRoutes);
+app.use(cartRoutes);
+app.use(categoryRoutes);
 app.use(todoRoutes);
 app.use(familyRoutes);
 app.use(petRoutes);
